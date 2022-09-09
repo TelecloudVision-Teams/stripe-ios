@@ -33,6 +33,7 @@ final class SectionView: UIView {
         self.viewModel = viewModel
         self.containerView = SectionContainerView(views: viewModel.views, theme: viewModel.theme)
         super.init(frame: .zero)
+        semanticContentAttribute = .forceLeftToRight
 
         let stack = UIStackView(arrangedSubviews: [titleLabel, containerView, errorOrSubLabel])
         stack.axis = .vertical

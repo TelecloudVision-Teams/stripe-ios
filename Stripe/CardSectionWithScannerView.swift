@@ -39,6 +39,7 @@ final class CardSectionWithScannerView: UIView {
         self.delegate = delegate
         self.theme = theme
         super.init(frame: .zero)
+        semanticContentAttribute = .forceLeftToRight
         installConstraints()
     }
     
@@ -48,7 +49,7 @@ final class CardSectionWithScannerView: UIView {
         let sectionTitle = ElementsUI.makeSectionTitleLabel(theme: theme)
         sectionTitle.text = String.Localized.card_information
         let cardSectionTitleAndButton = UIStackView(arrangedSubviews: [sectionTitle, cardScanButton])
-        
+        cardSectionTitleAndButton.semanticContentAttribute = .forceLeftToRight
         let stack = UIStackView(arrangedSubviews: [cardSectionTitleAndButton, cardSectionView, cardScanningView])
         stack.axis = .vertical
         stack.spacing = ElementsUI.sectionSpacing

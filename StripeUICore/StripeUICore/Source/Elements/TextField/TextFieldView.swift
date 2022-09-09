@@ -90,6 +90,7 @@ class TextFieldView: UIView {
         self.delegate = delegate
         super.init(frame: .zero)
         isAccessibilityElement = true
+        semanticContentAttribute = .forceLeftToRight
         installConstraints()
         updateUI(with: viewModel)
     }
@@ -130,6 +131,7 @@ class TextFieldView: UIView {
                                                       for: .horizontal)
         hStack.alignment = .center
         hStack.spacing = 6
+        hStack.semanticContentAttribute = .forceLeftToRight
         addAndPinSubview(hStack, insets: ElementsUI.contentViewInsets)
     }
     

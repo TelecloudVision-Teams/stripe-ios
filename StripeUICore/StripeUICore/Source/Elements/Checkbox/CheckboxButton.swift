@@ -279,6 +279,7 @@ class CheckBox: UIView {
 
         backgroundColor = .clear
         layer.applyShadow(shadow: theme.shadow)
+        semanticContentAttribute = .forceLeftToRight
 
         setContentHuggingPriority(.defaultHigh, for: .horizontal)
         setContentHuggingPriority(.defaultHigh, for: .vertical)

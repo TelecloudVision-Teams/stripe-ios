@@ -42,6 +42,7 @@ class FloatingPlaceholderTextFieldView: UIView {
         self.textField = textField
         self.theme = theme
         super.init(frame: .zero)
+        semanticContentAttribute = .forceLeftToRight
         isAccessibilityElement = true
         installConstraints()
     }

@@ -108,6 +108,7 @@ final class PickerFieldView: UIView {
         self.delegate = delegate
         self.theme = theme
         super.init(frame: .zero)
+        semanticContentAttribute = .forceLeftToRight
         addAndPinSubview(hStackView, directionalLayoutMargins: ElementsUI.contentViewInsets)
         layer.borderColor = theme.colors.border.cgColor
         defer {
