@@ -54,6 +54,7 @@ class TextFieldView: UIView {
         textField.spellCheckingType = .no
         textField.adjustsFontForContentSizeCategory = true
         textField.font = viewModel.theme.fonts.subheadline
+        textField.semanticContentAttribute = .forceLeftToRight
         return textField
     }()
     private lazy var textFieldView: FloatingPlaceholderTextFieldView = {

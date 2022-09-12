@@ -40,6 +40,7 @@ class FloatingPlaceholderTextFieldView: UIView {
     
     public init(textField: UITextField, theme: ElementsUITheme = .default) {
         self.textField = textField
+        self.textField.textAlignment = .left
         self.theme = theme
         super.init(frame: .zero)
         semanticContentAttribute = .forceLeftToRight

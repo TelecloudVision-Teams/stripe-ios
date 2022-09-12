@@ -66,6 +66,7 @@ import UIKit
         stackView.distribution = .equalSpacing
         stackView.alignment = .leading
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.semanticContentAttribute = .forceLeftToRight
         return stackView
     }()
 
@@ -120,6 +121,7 @@ import UIKit
         isAccessibilityElement = true
         accessibilityHint = description
         accessibilityTraits = UISwitch().accessibilityTraits
+        semanticContentAttribute = .forceLeftToRight
 
         descriptionLabel.text = description
 
